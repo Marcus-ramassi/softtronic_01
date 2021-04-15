@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
-import 'package:softtronic_01/TelaEquipamentoDetalhe.dart';
+import 'package:softtronic_01/TelasInutilizadas/TelaEquipamento.dart';
 
-class WidgetEquipamentos extends StatelessWidget {
+class WidgetCCM extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlatButton(
       onPressed: () {
         Navigator.push(context,
-            MaterialPageRoute(builder: (context) => TelaEquipamentoDetalhe()));
+            MaterialPageRoute(builder: (context) => TelaEquipamento()));
       },
       child: Container(
         width: MediaQuery.of(context).size.width * 0.8,
@@ -53,25 +53,17 @@ class WidgetEquipamentos extends StatelessWidget {
                     children: [
                       Container(
                         child: Image.asset(
-                          'lib/imagens/imagem equipamento.jpg',
+                          'lib/imagens/imagem ccm.jpg',
                           fit: BoxFit.fill,
-                        ),
+                          ),
                         width: 48,
                         height: 48,
                       ),
                     ]),
               ],
             ),
-            Column(
-              children: [
-                Text('   texto com nome da Aplicação',
-                    style:
-                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-                Text('   texto com o codigo do equipamento',
-                    style:
-                        TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
-              ],
-            ),
+            Text('   texto com nome da localidade',
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
           ],
         )),
       ),

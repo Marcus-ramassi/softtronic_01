@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 
+import 'package:softtronic_01/TelatabcontroleEquipamentos.dart';
+
 import 'TelaCCM.dart';
 import 'TelaInserirCliente.dart';
 
-class TelaUnidade extends StatefulWidget {
+class TelaEquipamentoListview extends StatefulWidget {
   @override
   _ListViewBuilderState createState() => _ListViewBuilderState();
 }
 
-class _ListViewBuilderState extends State<TelaUnidade> {
+class _ListViewBuilderState extends State<TelaEquipamentoListview> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Unidades por cliente'),
-        backgroundColor: Colors.indigo[800],
+        title: Text('Equipamentos por CCM'),
+        backgroundColor: Colors.grey[800],
       ),
       backgroundColor: Colors.grey[100],
       body: Column(
@@ -30,7 +32,7 @@ class _ListViewBuilderState extends State<TelaUnidade> {
               Expanded(
                 child: Container(
                   child: Text(
-                    'Nome do cliente selecionado',
+                    'Nome do CCm selecionado',
                     style: TextStyle(
                         fontSize: 24,
                         fontStyle: FontStyle.italic,
@@ -58,8 +60,8 @@ class _ListViewBuilderState extends State<TelaUnidade> {
                         Container(
                           width: 150,
                           child: Center(
-                            child: Image.network(
-                                'https://picsum.photos/id/${index + 1}/120'),
+                            child: Image.asset(
+                                'lib/imagens/imagem equipamento.jpg'),
                           ),
                         ),
                         Expanded(
@@ -69,22 +71,26 @@ class _ListViewBuilderState extends State<TelaUnidade> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
-                                Text('Nome da Unidade', style: TextStyle(
-                                  fontSize: 24,
-                                  //fontStyle: FontStyle.italic,
-                                  fontWeight: FontWeight.bold),), 
-                               SizedBox(height: 10),
-                                Text('nome do Responsavel'), 
+                                Text(
+                                  'Aplicação',
+                                  style: TextStyle(
+                                      fontSize: 24,
+                                      //fontStyle: FontStyle.italic,
+                                      fontWeight: FontWeight.bold),
+                                ),
                                 SizedBox(height: 10),
-                                Text('Email'), 
+                                Text('Modelo'),
+                                SizedBox(height: 10),
+                                Text('TAG'),
                                 SizedBox(height: 40),
                                 Container(
                                   alignment: Alignment.center,
                                   child: Row(
-                                     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
                                       ElevatedButton(
                                         child: Row(
+                                           
                                           children: [
                                             Text('Entrar'),
                                             Icon(Icons.input),
@@ -95,7 +101,7 @@ class _ListViewBuilderState extends State<TelaUnidade> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      TelaCCM()));
+                                                      MyHomePage()));
                                         },
                                       ),
                                       SizedBox(width: 40),

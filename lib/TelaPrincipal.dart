@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:softtronic_01/TelaClienteListView.dart';
+import 'package:softtronic_01/TelaCliente.dart';
+import 'package:softtronic_01/TelaLogin.dart';
 import 'package:softtronic_01/TelaSobre.dart';
-
-import 'TelaClientes.dart';
-import 'TelaEquipamento.dart';
+import 'TelasInutilizadas/TelaEquipamento.dart';
 
 class TelaPrincipal extends StatelessWidget {
   @override
@@ -88,6 +87,11 @@ class TelaPrincipal extends StatelessWidget {
                         iconSize: 30,
                         onPressed: () {
                           // escreve aqui o que o botão vai fazer
+                           Navigator.push(
+                             context,
+                              MaterialPageRoute(
+                            builder: (context) => TelaLogin()),
+                );
                         },
                       ),
                       Text(
@@ -172,11 +176,7 @@ class TelaPrincipal extends StatelessWidget {
             ListTile(
               title: Text('Pesquisar'),
               onTap: () {
-                Navigator.pop(context);
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => TelaClientes()),
-                );
+               
               },
             ),
             ListTile(

@@ -55,6 +55,7 @@ class _ListViewBuilderState extends State<TelaClienteListView> {
                                 Container(
                                   alignment: Alignment.center,
                                   child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                                     children: [
                                       ElevatedButton(
                                         child: Row(

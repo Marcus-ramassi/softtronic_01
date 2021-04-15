@@ -220,7 +220,7 @@ class TelaSobre extends StatelessWidget {
            SizedBox(height: 40),
           
           Text(
-              'Desnvolvido po: Marcus Vinicus Guedes Ramassi',
+              'Desnvolvido por: Marcus Vinicus Guedes Ramassi',
               style: TextStyle(
                 fontSize: 16,
               ),

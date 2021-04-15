@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:softtronic_01/TelaInserirCliente.dart';
-import 'package:softtronic_01/WidgetClientes.dart';
-import 'package:softtronic_01/WidgetEquipamentos.dart';
+import 'package:softtronic_01/TelasInutilizadas/WidgetClientes.dart';
+import 'package:softtronic_01/TelasInutilizadas/WidgetEquipamentos.dart';
 
 import 'WidgetCCM.dart';
 
