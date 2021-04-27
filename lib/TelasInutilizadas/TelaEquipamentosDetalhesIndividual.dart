@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:softtronic_01/TelaPreventiva.dart';
 
-import 'TelaInserirCliente.dart';
-import 'TelaPreventiva.dart';
 
-class MyHomePage extends StatefulWidget {
+
+class TelaEquipamentosIndividual extends StatefulWidget {
   @override
   _MyHomePageState createState() => new _MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage>
+class _MyHomePageState extends State<TelaEquipamentosIndividual>
     with SingleTickerProviderStateMixin {
   TabController _controller;
 
@@ -42,44 +42,40 @@ class _MyHomePageState extends State<MyHomePage>
                     icon: const Icon(Icons.qr_code_outlined), onPressed: () {}),
               ),
             ),
-      
-            Padding(
-               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-                child: new Container(
-                width: MediaQuery.of(context).size.width,
-                decoration: new BoxDecoration(color: Colors.indigo[800]),
-                child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      new TabBar(
-                          isScrollable: true,
-                          indicatorColor: Colors.amber[600],
-                          controller: _controller,
-                          tabs: [
-                            new Tab(
-                              icon: const Icon(Icons.home),
-                              text: 'Manutenções\nPreventiva',
-                            ),
-                            new Tab(
-                              icon: const Icon(Icons.my_location),
-                              text: 'Manutenções\nCorretivas',
-                            ),
-                            new Tab(
-                              icon: const Icon(Icons.home),
-                              text: 'Ordens\nServiço',
-                            ),
-                            new Tab(
-                              icon: const Icon(Icons.my_location),
-                              text: 'Manuais',
-                            ),
-                            new Tab(
-                              icon: const Icon(Icons.my_location),
-                              text: 'Back Up',
-                            ),
-                          ],
-                        ),
+            new Container(
+              width: MediaQuery.of(context).size.width,
+              decoration: new BoxDecoration(color: Colors.indigo[800]),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  new TabBar(
+                    isScrollable: true,
+                    indicatorColor: Colors.amber[600],
+                    controller: _controller,
+                    tabs: [
+                      new Tab(
+                        icon: const Icon(Icons.home),
+                        text: 'Manutenções\nPreventiva',
+                      ),
+                      new Tab(
+                        icon: const Icon(Icons.my_location),
+                        text: 'Manutenções\nCorretivas',
+                      ),
+                      new Tab(
+                        icon: const Icon(Icons.home),
+                        text: 'Ordens\nServiço',
+                      ),
+                      new Tab(
+                        icon: const Icon(Icons.my_location),
+                        text: 'Manuais',
+                      ),
+                      new Tab(
+                        icon: const Icon(Icons.my_location),
+                        text: 'Back Up',
+                      ),
                     ],
                   ),
+                ],
               ),
             ),
             Expanded(
@@ -139,15 +135,17 @@ class _MyHomePageState extends State<MyHomePage>
                             ),
                           ),
                           FloatingActionButton(
-                                                onPressed: () {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(builder: (context) => TelaInserirPreventiva()),
-                                                  );
-                                                },
-                                                child: Icon(Icons.add),
-                                                backgroundColor: Colors.indigo[700],
-                                              ),
+                            onPressed: () {
+                              Navigator.push(
+                                
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => TelaInserirPreventiva()),
+                              );
+                            },
+                            child: Icon(Icons.add),
+                            backgroundColor: Colors.indigo[700],
+                          ),
                         ],
                       ),
                     )),
@@ -202,15 +200,16 @@ class _MyHomePageState extends State<MyHomePage>
                             ),
                           ),
                           FloatingActionButton(
-                                                onPressed: () {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(builder: (context) => TelaInserirPreventiva()),
-                                                  );
-                                                },
-                                                child: Icon(Icons.add),
-                                                backgroundColor: Colors.indigo[700],
-                                              ),
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => TelaInserirPreventiva()),
+                              );
+                            },
+                            child: Icon(Icons.add),
+                            backgroundColor: Colors.indigo[700],
+                          ),
                         ],
                       ),
                     )),
@@ -257,26 +256,24 @@ class _MyHomePageState extends State<MyHomePage>
                                                   Icons.find_in_page),
                                               onPressed: () {},
                                             ),
-                                            
                                           ),
                                         ),
                                       ]),
                                     );
-                                    
                                   }),
                             ),
-                            
                           ),
-                           FloatingActionButton(
-                                                onPressed: () {
-                                                  Navigator.push(
-                                                    context,
-                                                    MaterialPageRoute(builder: (context) => TelaInserirPreventiva()),
-                                                  );
-                                                },
-                                                child: Icon(Icons.add),
-                                                backgroundColor: Colors.indigo[700],
-                                              ),
+                          FloatingActionButton(
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => TelaInserirPreventiva()),
+                              );
+                            },
+                            child: Icon(Icons.add),
+                            backgroundColor: Colors.indigo[700],
+                          ),
                         ],
                       ),
                     )),

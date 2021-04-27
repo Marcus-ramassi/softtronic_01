@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:softtronic_01/TelaCliente.dart';
+import 'package:softtronic_01/TelasInutilizadas/TelaEquipamentosDetalhesIndividual.dart';
 import 'package:softtronic_01/TelaLogin.dart';
+import 'package:softtronic_01/TelaPreventiva.dart';
 import 'package:softtronic_01/TelaSobre.dart';
+import 'package:softtronic_01/TelasInutilizadas/teste.dart';
 import 'TelasInutilizadas/TelaEquipamento.dart';
 
 class TelaPrincipal extends StatelessWidget {
@@ -39,6 +42,11 @@ class TelaPrincipal extends StatelessWidget {
                             color: Colors.white),
                         iconSize: 30,
                         onPressed: () {
+                          Navigator.push(
+                             context,
+                              MaterialPageRoute(
+                            builder: (context) => MyTabBar()),
+                );
                           // escreve aqui o que o botão vai fazer
                         },
                       ),
@@ -55,6 +63,12 @@ class TelaPrincipal extends StatelessWidget {
                             const Icon(Icons.account_tree, color: Colors.white),
                         iconSize: 30,
                         onPressed: () {
+                         Navigator.push(
+                                
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => TelaInserirPreventiva()),
+                              ); 
                           // escreve aqui o que o botão vai fazer
                         },
                       ),
@@ -70,6 +84,11 @@ class TelaPrincipal extends StatelessWidget {
                         icon: const Icon(Icons.add_box, color: Colors.white),
                         iconSize: 30,
                         onPressed: () {
+                            Navigator.push(
+                             context,
+                              MaterialPageRoute(
+                            builder: (context) => TelaEquipamentosIndividual()),
+                );
                           // escreve aqui o que o botão vai fazer
                         },
                       ),
