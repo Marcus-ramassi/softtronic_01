@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:softtronic_01/TelasInutilizadas/TelaEquipamento.dart';
+
 import 'package:softtronic_01/TelaEquipamentosListview.dart';
 import 'TelaInserirCliente.dart';
 

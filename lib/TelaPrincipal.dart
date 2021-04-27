@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:softtronic_01/TelaCliente.dart';
-import 'package:softtronic_01/TelasInutilizadas/TelaEquipamentosDetalhesIndividual.dart';
+import 'package:softtronic_01/TelaEquipamentosListview.dart';
+
 import 'package:softtronic_01/TelaLogin.dart';
 import 'package:softtronic_01/TelaPreventiva.dart';
+import 'package:softtronic_01/TelaQrCode.dart';
 import 'package:softtronic_01/TelaSobre.dart';
-import 'package:softtronic_01/TelasInutilizadas/teste.dart';
-import 'TelasInutilizadas/TelaEquipamento.dart';
+import 'package:softtronic_01/Testeformulario.dart';
+
+import 'TelatabcontroleEquipamentos.dart';
 
 class TelaPrincipal extends StatelessWidget {
   @override
@@ -45,7 +48,7 @@ class TelaPrincipal extends StatelessWidget {
                           Navigator.push(
                              context,
                               MaterialPageRoute(
-                            builder: (context) => MyTabBar()),
+                            builder: (context) => TelaQrcode()),
                 );
                           // escreve aqui o que o botão vai fazer
                         },
@@ -63,12 +66,7 @@ class TelaPrincipal extends StatelessWidget {
                             const Icon(Icons.account_tree, color: Colors.white),
                         iconSize: 30,
                         onPressed: () {
-                         Navigator.push(
-                                
-                                context,
-                                MaterialPageRoute(
-                                    builder: (context) => TelaInserirPreventiva()),
-                              ); 
+                         
                           // escreve aqui o que o botão vai fazer
                         },
                       ),
@@ -87,7 +85,7 @@ class TelaPrincipal extends StatelessWidget {
                             Navigator.push(
                              context,
                               MaterialPageRoute(
-                            builder: (context) => TelaEquipamentosIndividual()),
+                            builder: (context) => MyHomePage()),
                 );
                           // escreve aqui o que o botão vai fazer
                         },
@@ -201,10 +199,17 @@ class TelaPrincipal extends StatelessWidget {
             ListTile(
               title: Text('Gerar Relatorio'),
               onTap: () {
+                  Navigator.pop(context);
+                Navigator.push(
+                             context,
+                              MaterialPageRoute(
+                            builder: (context) => IconStepperDemo()),
+                );
+        
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+               
               },
             ),
             ListTile(
@@ -214,6 +219,7 @@ class TelaPrincipal extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 Navigator.pop(context);
+                
               },
             ),
             ListTile(
@@ -231,7 +237,7 @@ class TelaPrincipal extends StatelessWidget {
                 Navigator.pop(context);
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => TelaEquipamento()),
+                  MaterialPageRoute(builder: (context) => TelaEquipamentoListview()),
                 );
               },
             ),

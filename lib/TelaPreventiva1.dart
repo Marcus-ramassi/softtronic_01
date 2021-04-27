@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-class TelaInserirPreventiva extends StatefulWidget {
+class TelaInserirPreventiva1 extends StatefulWidget {
   @override
   _ExemploFormState createState() => _ExemploFormState();
 }
 
-class _ExemploFormState extends State<TelaInserirPreventiva>
+class _ExemploFormState extends State<TelaInserirPreventiva1>
     with SingleTickerProviderStateMixin {
   GlobalKey<FormState> _key = new GlobalKey();
   GlobalKey<FormState> _key1 = new GlobalKey();
@@ -41,122 +41,6 @@ class _ExemploFormState extends State<TelaInserirPreventiva>
                       fontSize: 18,
                       //fontStyle: FontStyle.italic,
                       fontWeight: FontWeight.bold),
-                ),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 5),
-              child: new Container(
-                width: MediaQuery.of(context).size.width,
-                decoration: new BoxDecoration(color: Colors.transparent),
-                child: new TabBar(
-                  controller: _controller,
-                  labelColor: Colors.indigo[900],
-                  isScrollable: true,
-                  indicatorColor: Colors.transparent,
-                  unselectedLabelColor: Colors.black,
-                  unselectedLabelStyle: TextStyle(
-                    fontSize: 16,
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w700,
-                  ),
-                  tabs: <Widget>[
-                    new Tab(
-                      icon: const Icon(Icons.data_usage),
-                      text: 'Circuito Retificador',
-                    ),
-                    new Tab(
-                      icon: const Icon(Icons.bar_chart),
-                      text: 'Ponte Inversora\nModulo IGBT',
-                    ),
-                    new Tab(
-                      icon: const Icon(Icons.directions_off),
-                      text: 'Placa retificadora',
-                    ),
-                    new Tab(
-                      icon: const Icon(Icons.attractions),
-                      text: 'Ventilação',
-                    ),
-                    new Tab(
-                      icon: const Icon(Icons.av_timer_outlined),
-                      text: 'Frenagem',
-                    ),
-                    new Tab(
-                      icon: const Icon(Icons.battery_alert),
-                      text: 'Capacitores',
-                    ),
-                    new Tab(
-                      icon: const Icon(Icons.my_location),
-                      text: 'Ambiente',
-                    ),
-                    new Tab(
-                      icon: const Icon(Icons.my_location),
-                      text: 'Observação',
-                    ),
-                    new Tab(
-                      icon: const Icon(Icons.my_location),
-                      text: 'Situação',
-                    ),
-                  ],
-                ),
-              ),
-            ),
-            Expanded(
-              child: Container(
-                height: MediaQuery.of(context).size.height,
-                child: new TabBarView(
-                  controller: _controller,
-                  children: <Widget>[
-                    new Card(
-                      ///////////////////////////////////Circuito retificador
-
-                      child: SingleChildScrollView(
-                        child: Form(
-                          key: _key,
-                          autovalidate: _validate,
-                          child: _circuitoRetificador(),
-                        ),
-                      ),
-                    ),
-                    new Card(
-                      ///////////////////////////////////Modulo IGBT
-                      child: SingleChildScrollView(
-                        child: Form(
-                          key: _key1,
-                          autovalidate: _validate,
-                          child: _moduloIGBT(),
-                        ),
-                      ),
-                    ),
-                    new Card(
-                      ///////////////////////////////////Placa retificadora
-                      child: SingleChildScrollView(
-                        child: Form(
-                          key: _key,
-                          autovalidate: _validate,
-                          child: _placaRetificadora(),
-                        ),
-                      ),
-                    ),
-                    new Card(//////////////////////////////////tela manuais
-
-                        ),
-                    new Card(//////////////////////////////////////tela backup's
-
-                        ),
-                    new Card(//////////////////////////////////////tela backup's
-
-                        ),
-                    new Card(//////////////////////////////////////tela backup's
-
-                        ),
-                    new Card(//////////////////////////////////////tela backup's
-
-                        ),
-                    new Card(//////////////////////////////////////tela backup's
-
-                        ),
-                  ],
                 ),
               ),
             ),

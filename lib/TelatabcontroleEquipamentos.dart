@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'TelaInserirCliente.dart';
+
 import 'TelaPreventiva.dart';
 
 class MyHomePage extends StatefulWidget {
