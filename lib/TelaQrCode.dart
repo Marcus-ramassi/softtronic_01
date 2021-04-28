@@ -19,7 +19,7 @@ class TelaQrcode extends StatelessWidget {
                 //color: Colors.grey,
                 width: MediaQuery.of(context).size.width,
                 height: MediaQuery.of(context).size.height * 0.75,
-                child: Image(image: AssetImage('lib/imagens/icone.png')),
+                child: Image(image: AssetImage('lib/imagens/qrCode.jpg')),
               )
             ],
           ),

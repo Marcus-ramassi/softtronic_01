@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 
 import 'TelaPreventiva.dart';
+import 'TelaQrCode.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -39,7 +40,14 @@ class _MyHomePageState extends State<MyHomePage>
                       fontWeight: FontWeight.bold),
                 ),
                 trailing: IconButton(
-                    icon: const Icon(Icons.qr_code_outlined), onPressed: () {}),
+                    icon: const Icon(Icons.qr_code_outlined), onPressed: () {
+                            Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TelaQrcode()),
+                          );
+
+                    }),
               ),
             ),
       

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'package:softtronic_01/TelaEquipamentosListview.dart';
-import 'TelaInserirCliente.dart';
+import 'TelasAdicionar/TelaAdicionarCCM.dart';
+import 'TelasAdicionar/TelaInserirCliente.dart';
 
 class TelaCCM extends StatefulWidget {
   @override
@@ -16,7 +17,7 @@ class _ListViewBuilderState extends State<TelaCCM> {
         title: Text('Localidade'),
         backgroundColor: Colors.indigo[800],
       ),
-      backgroundColor: Colors.grey[100],
+      
       body: Column(
         children: [
           Row(
@@ -133,7 +134,7 @@ class _ListViewBuilderState extends State<TelaCCM> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TelaInserirCliente()),
+                MaterialPageRoute(builder: (context) => TelaAdicionarCCM()),
               );
             },
             child: Icon(Icons.add),

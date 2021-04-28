@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:softtronic_01/TelatabcontroleEquipamentos.dart';
 
 import 'TelaCCM.dart';
-import 'TelaInserirCliente.dart';
+import 'TelasAdicionar/TelaAdicionarEquipamento.dart';
+import 'TelasAdicionar/TelaInserirCliente.dart';
 
 class TelaEquipamentoListview extends StatefulWidget {
   @override
@@ -16,9 +17,8 @@ class _ListViewBuilderState extends State<TelaEquipamentoListview> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Equipamentos por CCM'),
-        backgroundColor: Colors.grey[800],
+        backgroundColor: Colors.indigo[800],
       ),
-      backgroundColor: Colors.grey[100],
       body: Column(
         children: [
           Row(
@@ -138,7 +138,7 @@ class _ListViewBuilderState extends State<TelaEquipamentoListview> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TelaInserirCliente()),
+                MaterialPageRoute(builder: (context) => TelaAdicionarEquipamento()),
               );
             },
             child: Icon(Icons.add),

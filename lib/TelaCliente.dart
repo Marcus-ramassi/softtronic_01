@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'TelaCCM.dart';
-import 'TelaInserirCliente.dart';
+import 'TelasAdicionar/TelaAdicionarCliente.dart';
+import 'TelasAdicionar/TelaInserirCliente.dart';
 import 'TelaUnidade.dart';
 
 class TelaClienteListView extends StatefulWidget {
@@ -106,7 +107,7 @@ class _ListViewBuilderState extends State<TelaClienteListView> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TelaInserirCliente()),
+                MaterialPageRoute(builder: (context) => TelaAdicionarCliente()),
               );
             },
             child: Icon(Icons.add),
