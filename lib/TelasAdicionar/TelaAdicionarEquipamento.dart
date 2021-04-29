@@ -362,7 +362,7 @@ class _ExemploFormState extends State<TelaAdicionarEquipamento>
                     ),
                   ),
                 ),
-                 Step(
+                Step(
                   title: Text("Opcionais"),
                   content: Padding(
                     padding: const EdgeInsets.all(8.0),

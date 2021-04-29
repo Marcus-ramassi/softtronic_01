@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 
 import 'TelaPreventiva.dart';
 import 'TelaQrCode.dart';
+import 'TelasAdicionar/TelaAdicionarPreventiva.dart';
+import 'TestePDF.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -279,7 +281,7 @@ class _MyHomePageState extends State<MyHomePage>
                                                 onPressed: () {
                                                   Navigator.push(
                                                     context,
-                                                    MaterialPageRoute(builder: (context) => TelaInserirPreventiva()),
+                                                    MaterialPageRoute(builder: (context) => TelaAdicionarPreventiva()),
                                                   );
                                                 },
                                                 child: Icon(Icons.add),
@@ -289,6 +291,88 @@ class _MyHomePageState extends State<MyHomePage>
                       ),
                     )),
                     new Card(//////////////////////////////////tela manuais
+                        child: Column(
+                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            FlatButton(
+                                                          child: Container(
+                                color: Colors.blueGrey[200],
+                                 width: MediaQuery.of(context).size.width * 1,
+                                  height: 70,
+                                child: Row(
+                                  children: [
+                                    Image(image: AssetImage('lib/imagens/icone_pdf.jpg')),
+                                     SizedBox(
+                                  height: 5,
+                                  width: 5,
+                                      ),
+                                    Text('Manual de Programação',
+                                    style: TextStyle(
+                                    fontSize: 16,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold),
+                                      )
+                                  ],
+                                )
+                              ),
+                              onPressed: (){
+                                Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TestePdf()),
+                          );
+                              },
+                            ),
+                             FlatButton(
+                                                          child: Container(
+                                color: Colors.blueGrey[200],
+                                 width: MediaQuery.of(context).size.width * 1,
+                                  height: 70,
+                                child: Row(
+                                  children: [
+                                    Image(image: AssetImage('lib/imagens/icone_pdf.jpg')),
+                                     SizedBox(
+                                  height: 5,
+                                  width: 5,
+                                      ),
+                                    Text('Manual de Instalação',
+                                    style: TextStyle(
+                                    fontSize: 16,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold),
+                                      )
+                                  ],
+                                )
+                              ),
+                              onPressed: (){},
+                            ),
+                             FlatButton(
+                                                          child: Container(
+                                color: Colors.blueGrey[200],
+                                 width: MediaQuery.of(context).size.width * 1,
+                                  height: 70,
+                                child: Row(
+                                  children: [
+                                    Image(image: AssetImage('lib/imagens/icone_pdf.jpg')),
+                                     SizedBox(
+                                  height: 5,
+                                  width: 5,
+                                      ),
+                                    Text('Manual de Rede',
+                                    style: TextStyle(
+                                    fontSize: 16,
+                                    fontStyle: FontStyle.italic,
+                                    fontWeight: FontWeight.bold),
+                                      )
+                                  ],
+                                )
+                              ),
+                              onPressed: (){},
+                            ),
+                          ],
+                        )
+
+
 
                         ),
                     new Card(//////////////////////////////////////tela backup's
@@ -304,3 +388,7 @@ class _MyHomePageState extends State<MyHomePage>
     );
   }
 }
+
+
+
+

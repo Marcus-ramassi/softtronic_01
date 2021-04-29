@@ -34,6 +34,8 @@ dependencies:
   cupertino_stepper: ^0.2.0
   cool_stepper_reloaded: ^2.2.0
   form_builder_image_picker: ^1.0.0-nullsafety.0
+  syncfusion_flutter_pdfviewer: ^19.1.58-beta
+  
 
 dev_dependencies:
   flutter_test:

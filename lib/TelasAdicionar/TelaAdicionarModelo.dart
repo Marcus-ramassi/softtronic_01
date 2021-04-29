@@ -169,6 +169,7 @@ class _ExemploFormState extends State<TelaAdicionarModelo>
                           ),
                           SizedBox(
                           height: 5,
+                          width: 5,
                         ),
                            Container(
                             child: TextFormField(
@@ -195,54 +196,106 @@ class _ExemploFormState extends State<TelaAdicionarModelo>
                       padding: const EdgeInsets.all(8.0), 
                       child: Column(
                         children: [
-                          Container(
-                            child: TextFormField(
-                              decoration: InputDecoration(
-                                labelText: 'Tensão',
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
+                          Row(
+                            children: [
+                              Container(
+                                width: 150,
+                                height: 50,
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'Tensão',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
                       
-                              onSaved: (String val) {
-                                tensao = val;
-                              },
-                            ),
+                                  onSaved: (String val) {
+                                    tensao = val;
+                                  },
+                                ),
+                              ),
+                               SizedBox(
+                               height: 5,
+                          width: 5,
+                              ),
+                              Container(
+                                alignment: Alignment.bottomLeft,
+                                width: 80,
+                                height: 50,
+                                child: Text('Volts',
+                               )
+                              ),
+                            ],
                           ),
                           SizedBox(
                           height: 5,
+                          width: 5,
                         ),
-                          Container(
-                            child: TextFormField(
-                              decoration: InputDecoration(
-                                labelText: 'Corrente',
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
+                          Row(
+                            children: [
+                              Container(
+                                width: 150,
+                                height: 50,
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'Corrente',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                               
+                                  onSaved: (String val) {
+                                    corrente = val;
+                                  },
                                 ),
                               ),
-                           
-                              onSaved: (String val) {
-                                corrente = val;
-                              },
-                            ),
+                               SizedBox(
+                               height: 5,
+                          width: 5,
+                              ),
+                              Container(
+                                alignment: Alignment.bottomLeft,
+                                width: 80,
+                                height: 50,
+                                child: Text('Amperes',
+                               )
+                              ),
+                            ],
                           ),
                           SizedBox(
                           height: 5,
+                          width: 5,
                         ),
-                           Container(
-                            child: TextFormField(
-                              decoration: InputDecoration(
-                                labelText: 'Potencia',
-                                border: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                              ),
+                           Row(
+                             children: [
+                               Container(
+                                 width: 150,
+                                height: 50,
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'Potencia',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
                  
-                              onSaved: (String val) {
-                                potencia = val;
-                              },
-                            ),
+                                  onSaved: (String val) {
+                                    potencia = val;
+                                  },
+                                ),
                           ),
+                           SizedBox(
+                                height: 5,
+                          width: 5,
+                              ),
+                          Container(
+                                alignment: Alignment.bottomLeft,
+                                width: 80,
+                                height: 50,
+                                child:DropPotencia()
+                              ),
+                             ],
+                           ),
                           
                         ],
                       ),
@@ -278,5 +331,47 @@ class _ExemploFormState extends State<TelaAdicionarModelo>
                 )
               ]),
         ));
+  }
+}
+
+class DropPotencia extends StatefulWidget {
+  const DropPotencia({Key key}) : super(key: key);
+
+  @override
+  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
+}
+
+/// This is the private State class that goes with MyStatefulWidget.
+class _MyStatefulWidgetState extends State<DropPotencia> {
+  String dropdownValue = 'CV';
+
+  @override
+  Widget build(BuildContext context) {
+    return DropdownButton<String>(
+      value: dropdownValue,
+      icon: const Icon(Icons.arrow_downward),
+      iconSize: 24,
+      elevation: 16,
+      style: const TextStyle(color: Colors.deepPurple),
+      underline: Container(
+        height: 2,
+        color: Colors.deepPurpleAccent,
+      ),
+      onChanged: (String newValue) {
+        setState(() {
+          dropdownValue = newValue;
+        });
+      },
+      items: <String>[
+        'CV',
+        'KW',
+        'HP'
+      ].map<DropdownMenuItem<String>>((String value) {
+        return DropdownMenuItem<String>(
+          value: value,
+          child: Text(value),
+        );
+      }).toList(),
+    );
   }
 }
