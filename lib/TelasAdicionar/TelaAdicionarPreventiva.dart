@@ -75,7 +75,7 @@ class _ExemploFormState extends State<TelaAdicionarPreventiva>
                       });
                     },
                     onStepContinue: () {
-                      if (_index >= 4) {
+                      if (_index >= 11) {
                         return;
                       }
                       setState(() {
@@ -1716,7 +1716,7 @@ class _ExemploFormState extends State<TelaAdicionarPreventiva>
                         ),
                       ),
                       Step(
-                        title: Text("Responsável"),
+                        title: Text("Circuito de Alimentação do Ventilador"),
                         content: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -1740,7 +1740,7 @@ class _ExemploFormState extends State<TelaAdicionarPreventiva>
                         ),
                       ),
                       Step(
-                        title: Text("Contato"),
+                        title: Text("Ventiladores"),
                         content: Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Column(
@@ -1779,7 +1779,124 @@ class _ExemploFormState extends State<TelaAdicionarPreventiva>
                         ),
                       ),
                       Step(
-                        title: Text("Imagens"),
+                        title: Text("Choppper de Frenagem Dinamico/Transistor de freio"),
+                        content: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Container(
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'Telefone',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onSaved: (String val) {
+                                    razaoSocial = val;
+                                  },
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Container(
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'E-Mail',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onSaved: (String val) {
+                                    email = val;
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Step(
+                        title: Text("Ambiente de Trabalho"),
+                        content: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Container(
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'Telefone',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onSaved: (String val) {
+                                    razaoSocial = val;
+                                  },
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Container(
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'E-Mail',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onSaved: (String val) {
+                                    email = val;
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Step(
+                        title: Text("Capacitores do Barramento CC"),
+                        content: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            children: [
+                              Container(
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'Telefone',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onSaved: (String val) {
+                                    razaoSocial = val;
+                                  },
+                                ),
+                              ),
+                              SizedBox(
+                                height: 5,
+                              ),
+                              Container(
+                                child: TextFormField(
+                                  decoration: InputDecoration(
+                                    labelText: 'E-Mail',
+                                    border: OutlineInputBorder(
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                  onSaved: (String val) {
+                                    email = val;
+                                  },
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      Step(
+                        title: Text("Imagens Retirada"),
                         content: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Container(
@@ -1790,14 +1907,402 @@ class _ExemploFormState extends State<TelaAdicionarPreventiva>
                                     FormBuilderImagePicker(
                                       name: 'photos',
                                       decoration: const InputDecoration(
-                                          labelText: 'Foto Unidade'),
-                                      maxImages: 3,
+                                          labelText: 'Imagem'),
+                                      maxImages: 20,
                                     ),
                                   ],
                                 ),
                               ),
                             )),
                       ),
+                        Step(
+                        title: Text("Imagens Preventiva(Antes/Depois)"),
+                        content: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              child: FormBuilder(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    FormBuilderImagePicker(
+                                      name: 'photos',
+                                      decoration: const InputDecoration(
+                                          labelText: 'Imagem'),
+                                      maxImages: 20,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )),
+                      ),
+                        Step(
+                        title: Text("Imagens Instalação"),
+                        content: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Container(
+                              child: FormBuilder(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: <Widget>[
+                                    FormBuilderImagePicker(
+                                      name: 'photos',
+                                      decoration: const InputDecoration(
+                                          labelText: 'Imagem'),
+                                      maxImages: 20,
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            )),
+                      ),
+                       Step(
+                        /////////////////////////////////////Status
+                        title: Text("Situação"),
+                        content: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Container(
+                            child: Column(
+                              children: [
+                                Container(
+                                    color: Colors.indigo[500],
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 16,
+                                    child: Text(
+                                      'Existente',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
+                                Card(
+                                  elevation: 15,
+                                  child: Container(
+                                    child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              new Radio(
+                                                value: 1,
+                                                groupValue: _radioValue,
+                                                onChanged:
+                                                    _handleRadioValueChange,
+                                              ),
+                                              Text('SIM'),
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              new Radio(
+                                                value: 2,
+                                                groupValue: _radioValue,
+                                                onChanged:
+                                                    _handleRadioValueChange,
+                                              ),
+                                              Text('NÂO'),
+                                            ],
+                                          ),
+                                        ]),
+                                  ),
+                                ),
+                                Container(
+                                    color: Colors.indigo[400],
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 16,
+                                    child: Text(
+                                      'Pré Carga',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
+                                Card(
+                                  elevation: 10,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                            child: Text('L1',
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.indigo[800],
+                                                ))),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              width: 150,
+                                              height: 35,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  labelStyle: TextStyle(
+                                                    fontSize: _fletras,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.grey[600],
+                                                  ),
+                                                  labelText: 'Diodos Vdc',
+                                                  floatingLabelBehavior:
+                                                      FloatingLabelBehavior
+                                                          .auto,
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                ),
+                                                // maxLength: 10,
+                                                //validator: _validarNome,
+                                                onSaved: (String val) {
+                                                  nome = val;
+                                                },
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 8,
+                                            ),
+                                            Container(
+                                              width: 150,
+                                              height: 35,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  labelStyle: TextStyle(
+                                                    fontSize: _fletras,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.grey[600],
+                                                  ),
+                                                  labelText: 'Resistores Ohms',
+                                                  floatingLabelBehavior:
+                                                      FloatingLabelBehavior
+                                                          .auto,
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                ),
+                                                // maxLength: 10,
+                                                //validator: _validarNome,
+                                                onSaved: (String val) {
+                                                  nome = val;
+                                                },
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Card(
+                                  elevation: 10,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                            child: Text('L2',
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.indigo[800],
+                                                ))),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              width: 150,
+                                              height: 35,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  labelStyle: TextStyle(
+                                                    fontSize: _fletras,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.grey[600],
+                                                  ),
+                                                  labelText: 'Diodos Vdc',
+                                                  floatingLabelBehavior:
+                                                      FloatingLabelBehavior
+                                                          .auto,
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                ),
+                                                // maxLength: 10,
+                                                //validator: _validarNome,
+                                                onSaved: (String val) {
+                                                  nome = val;
+                                                },
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 8,
+                                            ),
+                                            Container(
+                                              width: 150,
+                                              height: 35,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  labelStyle: TextStyle(
+                                                    fontSize: _fletras,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.grey[600],
+                                                  ),
+                                                  labelText: 'Resistores Ohms',
+                                                  floatingLabelBehavior:
+                                                      FloatingLabelBehavior
+                                                          .auto,
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                ),
+                                                // maxLength: 10,
+                                                //validator: _validarNome,
+                                                onSaved: (String val) {
+                                                  nome = val;
+                                                },
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Card(
+                                  elevation: 10,
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: Row(
+                                      children: [
+                                        Container(
+                                            child: Text('L3',
+                                                style: TextStyle(
+                                                  fontSize: 20,
+                                                  fontStyle: FontStyle.italic,
+                                                  fontWeight: FontWeight.bold,
+                                                  color: Colors.indigo[800],
+                                                ))),
+                                        SizedBox(
+                                          width: 15,
+                                        ),
+                                        Column(
+                                          children: [
+                                            Container(
+                                              width: 150,
+                                              height: 35,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  labelStyle: TextStyle(
+                                                    fontSize: _fletras,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.grey[600],
+                                                  ),
+                                                  labelText: 'Diodos Vdc',
+                                                  floatingLabelBehavior:
+                                                      FloatingLabelBehavior
+                                                          .auto,
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                ),
+                                                // maxLength: 10,
+                                                //validator: _validarNome,
+                                                onSaved: (String val) {
+                                                  nome = val;
+                                                },
+                                              ),
+                                            ),
+                                            SizedBox(
+                                              height: 8,
+                                            ),
+                                            Container(
+                                              width: 150,
+                                              height: 35,
+                                              child: TextFormField(
+                                                decoration: InputDecoration(
+                                                  labelStyle: TextStyle(
+                                                    fontSize: _fletras,
+                                                    fontWeight: FontWeight.bold,
+                                                    color: Colors.grey[600],
+                                                  ),
+                                                  labelText: 'Resistores Ohms',
+                                                  floatingLabelBehavior:
+                                                      FloatingLabelBehavior
+                                                          .auto,
+                                                  border: OutlineInputBorder(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10),
+                                                  ),
+                                                ),
+                                                // maxLength: 10,
+                                                //validator: _validarNome,
+                                                onSaved: (String val) {
+                                                  nome = val;
+                                                },
+                                              ),
+                                            ),
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                    color: Colors.indigo[400],
+                                    width: MediaQuery.of(context).size.width,
+                                    height: 16,
+                                    child: Text(
+                                      'Situação',
+                                      style: TextStyle(color: Colors.white),
+                                    )),
+                                Card(
+                                  elevation: 15,
+                                  child: Container(
+                                    child: Row(
+                                        mainAxisAlignment:
+                                            MainAxisAlignment.spaceEvenly,
+                                        children: [
+                                          Row(
+                                            children: [
+                                              new Radio(
+                                                value: 1,
+                                                groupValue: _radioValue,
+                                                onChanged:
+                                                    _handleRadioValueChange,
+                                              ),
+                                              Text('Aprovado'),
+                                            ],
+                                          ),
+                                          Row(
+                                            children: [
+                                              new Radio(
+                                                value: 2,
+                                                groupValue: _radioValue,
+                                                onChanged:
+                                                    _handleRadioValueChange,
+                                              ),
+                                              Text('Reprovado'),
+                                            ],
+                                          ),
+                                        ]),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      
                     ]),
               ),
             ),
